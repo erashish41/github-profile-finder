@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { GitFinder } from "./GitFinder";
 
 export const GitProfile = () => {
     const [ userName, setUserName ] = useState("erashish41");
@@ -46,15 +47,20 @@ export const GitProfile = () => {
 
     return (
         <div className="container">
+            <h1>Find Github Profile by Username</h1>
             <div className="content">
                 <input 
                     name="search-by-usrename"
                     type="text" 
                     placeholder="enter Github username..."
                     value={userName}
-                    onChange={(event) => setUserName(event.target.value)} />
+                    onChange={(event) => setUserName(event.target.value)} 
+                    />
             </div>
             <button onClick={handleOnClickButton}>Search profile</button>
+            {
+                userData !== null ? <GitFinder user={userData} /> : null
+            }
         </div>
     )
 }
