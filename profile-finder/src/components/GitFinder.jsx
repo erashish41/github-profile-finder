@@ -1,4 +1,4 @@
-export const GitProfile = () => {
+export const GitFinder = () => {
     return (
         <>
 

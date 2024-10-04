@@ -1,7 +1,9 @@
+import { GitProfile } from "./components/GitProfile";
+
 const App = () => {
   return (
     <>
-
+      <GitProfile />
     </>
   )
 }
