@@ -9,6 +9,8 @@ export const GitFinder = ({user}) => {
             </div>
             <div>
                 <a href={`https://github.com/$`}>{name || login}</a>
+                <p>{bio}</p>
+                <p>{created_at}</p>
             </div>
         </div>
     )
